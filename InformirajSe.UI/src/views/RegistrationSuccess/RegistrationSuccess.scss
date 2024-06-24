@@ -1,0 +1,359 @@
+$primary-color: #6633ff;
+
+* {
+    scroll-behavior: smooth;
+}
+
+.registration-success-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+	background-size: 400% 540%;
+	animation: reg_gradient 15s ease infinite;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes reg_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.registration-success-body-container {
+    width: 1035px;
+    height: 667px;
+    background-color: white;
+    border-radius: 20px;
+
+    &-title {
+        font-size: 64px;
+        color: $primary-color;
+        margin-top: 81px;
+        margin-left: 81px;
+        display: flex;
+    }
+
+    &-content {
+        width: 768px;
+        margin-left: 81px;
+        margin-top: 14px;
+        display: flex;
+        flex-direction: column;
+
+        &-paragraph {
+            text-align: left;
+            font-size: 20px;
+            
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+
+            &-accent {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &-navigation {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 104px;
+        margin-left: 71px;
+        margin-right: 71px;
+
+        &-home, &-login {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            
+            &-link {
+                font-size: 24px;
+            }
+        }
+
+        &-home-link {
+            color: black;
+        }
+
+        &-login-link {
+            color: $primary-color;
+        }
+    }
+}
+
+@media only screen and (max-width:1050px){
+    .registration-success-body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+        background-size: 400% 540%;
+        animation: reg_gradient 15s ease infinite;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes reg_gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .registration-success-body-container {
+        width: 800px;
+        height: 600px;
+        background-color: white;
+        border-radius: 20px;
+
+        &-title {
+            font-size: 44px;
+            color: $primary-color;
+            margin-top: 81px;
+            margin-left: 81px;
+            display: flex;
+        }
+
+        &-content {
+            width: 650px;
+            margin-left: 81px;
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+
+            &-paragraph {
+                text-align: left;
+                font-size: 18px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 20px;
+                }
+
+                &-accent {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 84px;
+            margin-left: 71px;
+            margin-right: 71px;
+
+            &-home, &-login {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &-link {
+                    font-size: 20px;
+                }
+            }
+
+            &-home-link {
+                color: black;
+            }
+
+            &-login-link {
+                color: $primary-color;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width:800px){
+    .registration-success-body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+        background-size: 400% 540%;
+        animation: reg_gradient 15s ease infinite;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes reg_gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .registration-success-body-container {
+        width: 600px;
+        height: 450px;
+        background-color: white;
+        border-radius: 20px;
+
+        &-title {
+            font-size: 34px;
+            color: $primary-color;
+            margin-top: 50px;
+            margin-left: 50px;
+            display: flex;
+        }
+
+        &-content {
+            width: 520px;
+            margin-left: 50px;
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+
+            &-paragraph {
+                text-align: left;
+                font-size: 15px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 20px;
+                }
+
+                &-accent {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 34px;
+            margin-left: 40px;
+            margin-right: 71px;
+
+            &-home, &-login {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &-link {
+                    font-size: 18px;
+                }
+            }
+
+            &-home-link {
+                color: black;
+            }
+
+            &-login-link {
+                color: $primary-color;
+            }
+        }
+    }   
+}
+
+@media only screen and (max-width:620px){
+    .registration-success-body {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+        background-size: 400% 540%;
+        animation: reg_gradient 15s ease infinite;
+        padding-top: 5%;
+        padding-bottom: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @keyframes reg_gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .registration-success-body-container {
+        width: 300px;
+        height: 550px;
+        background-color: white;
+        border-radius: 20px;
+
+        &-title {
+            font-size: 24px;
+            color: $primary-color;
+            margin-top: 30px;
+            margin-left: 20px;
+            display: flex;
+        }
+
+        &-content {
+            width: 265px;
+            margin-left: 20px;
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+
+            &-paragraph {
+                text-align: left;
+                font-size: 13px;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 20px;
+                }
+
+                &-accent {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 64px;
+            margin-left: 20px;
+            margin-right: 20px;
+
+            &-home, &-login {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                &-link {
+                    font-size: 15px;
+                }
+            }
+
+            &-home-link {
+                color: black;
+            }
+
+            &-login-link {
+                color: $primary-color;
+            }
+        }
+    }   
+}

@@ -1,0 +1,75 @@
+$primary-color: #6633ff;
+
+@mixin test-border{
+    border:solid black 1px;
+}
+
+.most-interesting-blogs-title{
+    color: $primary-color;
+    margin-top: 5%;
+}
+
+.most-interesting-blogs-main-text{
+    color: $primary-color;
+    width: 90%;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.most-interesting-blogs-blog-section{
+    width: 90%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 900px){
+    .most-interesting-blogs-title{
+        color: $primary-color;
+        margin-top: 5%;
+    }
+
+    .most-interesting-blogs-main-text{
+        color: $primary-color;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bolder;
+        font-size: 14px;
+    }
+
+    .most-interesting-blogs-blog-section{
+        width: 90%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .most-interesting-blogs-title{
+        color: $primary-color;
+        margin-top: 5%;
+    }
+
+    .most-interesting-blogs-main-text{
+        color: $primary-color;
+        width: 90%;
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: bolder;
+        font-size: 12px;
+    }
+
+    .most-interesting-blogs-blog-section{
+        width: 90%;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

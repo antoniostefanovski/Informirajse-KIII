@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InformirajSe.Common\InformirajSe.Common.csproj" />
+    <ProjectReference Include="..\InformirajSe.Domain\InformirajSe.Domain.csproj" />
+    <ProjectReference Include="..\InformirajSe.Repository\InformirajSe.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

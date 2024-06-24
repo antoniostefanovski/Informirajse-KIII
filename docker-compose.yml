@@ -1,0 +1,43 @@
+services:
+  postgresql-db:
+    container_name: postgresql.db
+    hostname: postgresql-db
+    image: postgres
+    pull_policy: missing
+    environment:
+      "POSTGRES_PASSWORD": ${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+    networks:
+      - informirajse-network
+  
+  informirajseapp:
+    container_name: informirajse-app
+    hostname: informirajse-app
+    image: anthony70/informirajse-app:1.0
+    pull_policy: missing
+    restart: unless-stopped
+    environment:
+      - ASPNETCORE_ENVIRONMENT=${ENVIRONMENT}
+      - ConnectionStrings__InformirajseDbConnection=${INFORMIRAJSE_DB}
+    ports:
+      - '6501:8080'
+    depends_on:
+      - postgresql-db
+    networks:
+      - informirajse-network
+  
+  informirajseapp-ui:
+    container_name: informirajse-app-ui
+    hostname: informirajse-app-ui
+    image: anthony70/informirajse-app-ui:1.0
+    pull_policy: always
+    restart: unless-stopped
+    ports:
+      - '3000:3000'
+    networks:
+      - informirajse-network
+
+networks:
+  informirajse-network:
+    driver: bridge

@@ -1,0 +1,141 @@
+$primary-color: #6633FF;
+@mixin test-border{
+    border: solid black 1px;
+}
+
+.blogs-main-content {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: auto;
+}
+
+.blogs-first-text {
+    font-size: 2vw;
+    margin-left: 0%;
+    text-align: left;
+    width: 100%;
+    font-weight: bolder;
+    color: $primary-color;
+}
+
+.blogs-search-bar {
+    display: flex;
+    margin-left: 24%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    width: 50%;
+}
+
+.blogs-search-bar-div {
+    width: 70%;
+    display: inline-flex;
+}
+
+.blogs-searchbar {
+    width: 30%;
+    height: 45px;
+    border: solid $primary-color 2px;
+    border-radius: 20px;
+    background-color: #f3f2f2;
+    font-weight: bold;
+    color: gray;
+}
+
+.blogs-search-button {
+    background-color: $primary-color;
+    height: 45px;
+    width: 125px;
+    border-radius: 20px;
+    margin-left: -9%;
+    color: #fff;
+    border: none;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.blogs-datelist {
+    width: 25%;
+    height: 45px;
+    border: solid $primary-color 2px;
+    border-radius: 20px;
+    background-color: #f3f2f2;
+    font-weight: bold;
+    color: gray;
+}
+
+.blogs-blog-section {
+    margin-top: 5%;
+}
+
+
+@media only screen and (max-width: 900px){
+    .blogs-main-content {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        padding: auto;
+    }
+    
+    .blogs-first-text {
+        font-size: 2vw;
+        margin-left: 0%;
+        text-align: left;
+        width: 100%;
+        font-weight: bolder;
+        color: $primary-color;
+    }
+    
+    .blogs-search-bar {
+        display: flex;
+        margin-left: 24%;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        width: 50%;
+    }
+    
+    .blogs-search-bar-div {
+        width: 70%;
+        display: inline-flex;
+    }
+    
+    .blogs-searchbar {
+        width: 30%;
+        height: 45px;
+        border: solid $primary-color 2px;
+        border-radius: 20px;
+        background-color: #f3f2f2;
+        font-weight: bold;
+        color: gray;
+    }
+    
+    .blogs-search-button {
+        background-color: $primary-color;
+        height: 45px;
+        width: 75px;
+        border-radius: 20px;
+        margin-left: -9%;
+        color: #fff;
+        border: none;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    
+    .blogs-datelist {
+        width: 25%;
+        height: 45px;
+        border: solid $primary-color 2px;
+        border-radius: 20px;
+        background-color: #f3f2f2;
+        font-weight: bold;
+        color: gray;
+    }
+    
+    .blogs-blog-section {
+        margin-top: 5%;
+    }
+}

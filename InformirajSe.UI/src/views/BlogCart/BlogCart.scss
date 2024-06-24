@@ -1,0 +1,343 @@
+$primary-color: #6633ff;
+
+@mixin test-border{
+    border: solid black 1px;
+}
+
+.blogcart-main-content{
+    
+    margin-bottom: 5%;
+    border: solid $primary-color 5px;
+    border-radius: 20px;
+    box-shadow: -11px 10px 11px 6px rgba(102, 51, 255, 0.13);
+    display: inline-flex;
+    
+    
+    .blogcart-img{
+        width: 250px;
+        height: 250px;
+        @include test-border();
+        margin: 30px;
+        border-radius: 20px;
+    }
+
+    .blogcart-right-side{
+        // @include test-border();
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        .cart-title{
+            color: $primary-color;
+            margin-top: 30px;
+            font-weight: bolder;
+            font-size: 22px;
+            text-align: left;
+        }
+    
+        .blog-cart-author{
+            color:  #0056b3;
+            font-weight: bolder;
+            font-size: 18px;
+            margin-top: 4%;
+        }
+
+        .blog-cart-date{
+            color: #0056b3;
+            margin-top: 2%;
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .blog-cart-div{
+            // @include test-border();
+            // margin-left: 78%;
+            margin-top: 5%;
+
+            .blog-cart-button{
+                background-color: #0056b3;
+                width: 170px;
+                height: 50px;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 550;
+                border:none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .blogcart-main-content{
+    
+        margin-bottom: 5%;
+        border: solid $primary-color 5px;
+        border-radius: 20px;
+        box-shadow: -11px 10px 11px 6px rgba(102, 51, 255, 0.13);
+        display: inline-flex;
+        
+        
+        .blogcart-img{
+            width: 150px;
+            height: 150px;
+            @include test-border();
+            margin: 30px;
+            border-radius: 20px;
+        }
+    
+        .blogcart-right-side{
+            // @include test-border();
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+    
+            .cart-title{
+                color: $primary-color;
+                margin-top: 30px;
+                font-weight: bolder;
+                font-size: 18px;
+                text-align: left;
+            }
+        
+            .blog-cart-author{
+                color:  #0056b3;
+                font-weight: bolder;
+                font-size: 14px;
+                margin-top: 4%;
+            }
+    
+            .blog-cart-date{
+                color: #0056b3;
+                margin-top: 2%;
+                font-size: 10px;
+                font-weight: bolder;
+            }
+    
+            .blog-cart-div{
+                // @include test-border();
+                // margin-left: 78%;
+                margin-top: 3%;
+    
+                .blog-cart-button{
+                    background-color: #0056b3;
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-weight: 550;
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .blogcart-main-content{
+    
+        margin-bottom: 5%;
+        border: solid $primary-color 5px;
+        border-radius: 20px;
+        box-shadow: -11px 10px 11px 6px rgba(102, 51, 255, 0.13);
+        display: inline-flex;
+        
+        
+        .blogcart-img{
+            width: 150px;
+            height: 150px;
+            @include test-border();
+            margin: 30px;
+            border-radius: 20px;
+        }
+    
+        .blogcart-right-side{
+            // @include test-border();
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+    
+            .cart-title{
+                color: $primary-color;
+                margin-top: 30px;
+                font-weight: bolder;
+                font-size: 15px;
+                text-align: left;
+            }
+        
+            .blog-cart-author{
+                color:  #0056b3;
+                font-weight: bolder;
+                font-size: 11px;
+                margin-top: 4%;
+            }
+    
+            .blog-cart-date{
+                color: #0056b3;
+                margin-top: 2%;
+                font-size: 13px;
+                font-weight: bolder;
+            }
+    
+            .blog-cart-div{
+                // @include test-border();
+                // margin-left: 78%;
+                margin-top: 3%;
+    
+                .blog-cart-button{
+                    background-color: #0056b3;
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 9px;
+                    font-weight: 550;
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .blogcart-main-content{
+    
+        margin-bottom: 5%;
+        border: solid $primary-color 5px;
+        border-radius: 20px;
+        box-shadow: -11px 10px 11px 6px rgba(102, 51, 255, 0.13);
+        display: inline-flex;
+        width: 80%;
+        height: 180px;
+        
+        
+        .blogcart-img{
+            width: 90px;
+            height: 90px;
+            @include test-border();
+            margin: 30px;
+            border-radius: 20px;
+        }
+    
+        .blogcart-right-side{
+            // @include test-border();
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+    
+            .cart-title{
+                color: $primary-color;
+                margin-top: 30px;
+                font-weight: bolder;
+                font-size: 0.75rem;
+                text-align: left;
+            }
+        
+            .blog-cart-author{
+                color:  #0056b3;
+                font-weight: bolder;
+                font-size: 8px;
+                margin-top: 4%;
+            }
+    
+            .blog-cart-date{
+                color: #0056b3;
+                margin-top: 2%;
+                font-size: 10px;
+                font-weight: bolder;
+            }
+    
+            .blog-cart-div{
+                // @include test-border();
+                // margin-left: 78%;
+                margin-top: 3%;
+    
+                .blog-cart-button{
+                    background-color: #0056b3;
+                    width: 90px;
+                    height: 35px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 9px;
+                    font-weight: 550;
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 450px) {
+    .blogcart-main-content{
+    
+        margin-bottom: 5%;
+        border: solid $primary-color 5px;
+        border-radius: 20px;
+        box-shadow: -11px 10px 11px 6px rgba(102, 51, 255, 0.13);
+        display: inline-flex;
+        width: 80%;
+        height: 180px;
+        
+        
+        .blogcart-img{
+            width: 100px;
+            height: 100px;
+            @include test-border();
+            margin: 30px;
+            border-radius: 20px;
+        }
+    
+        .blogcart-right-side{
+            // @include test-border();
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: -7%;
+            
+    
+            .cart-title{
+                color: $primary-color;
+                margin-top: 30px;
+                font-weight: bolder;
+                font-size: 2vw;
+                text-align: left;
+            }
+        
+            .blog-cart-author{
+                color:  #0056b3;
+                font-weight: bolder;
+                font-size: 8px;
+                margin-top: 4%;
+            }
+    
+            .blog-cart-date{
+                color: #0056b3;
+                margin-top: 2%;
+                font-size: 10px;
+                font-weight: bolder;
+            }
+    
+            .blog-cart-div{
+                // @include test-border();
+                // margin-left: 78%;
+                margin-top: 3%;
+    
+                .blog-cart-button{
+                    background-color: #0056b3;
+                    width: 90px;
+                    height: 35px;
+                    border-radius: 10px;
+                    color: #fff;
+                    font-size: 9px;
+                    font-weight: 550;
+                    border:none;
+                }
+            }
+        }
+    }
+    
+}

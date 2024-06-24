@@ -1,0 +1,346 @@
+$primarycolor: #6633FF;
+$primaryRgba: rgb(102, 51, 255, 0.9);
+$data : #484848;
+
+body{
+    background-color: #fff;
+}
+
+.profile-container {
+    margin-top: 74px;
+    margin-bottom: 74px;
+
+    &-title {
+        margin-left: 398px;
+
+        &-text {
+            font-size: 36px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        &-horizontal {
+            width: 454px;
+            height: 5px;
+            background-color: $primarycolor;
+        }
+    }
+
+    &-information {
+        margin-top: 15px;
+        display: flex;
+
+        &-avatar {
+           margin-left: 239px;
+        }
+
+        &-data {
+            display: flex;
+            flex-direction: column;
+            
+            &-wrapper {
+                display: flex;
+                gap: 87px;
+                margin-left: 13px;
+                margin-bottom: 16px;
+
+                &-element {
+                    width: 217px;
+
+                    &-info {
+                        margin-bottom: 12px;
+                        color: $data;
+                    }
+
+                    &-btn {
+                        margin-top: 15px;
+                        font-size: 22px;
+
+                        &-link {
+                            text-decoration: none;
+                            color: $primarycolor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-activity {
+        margin-top: 90px;
+        margin-left: 139px;
+
+        &-text {
+            font-size: 36px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        &-horizontal {
+            width: 454px;
+            height: 5px;
+            background-color: $primarycolor;
+        }
+    }
+
+    &-user-blogs {
+        margin-left: 139px;
+        margin-top: 38px;
+        display: flex;
+        flex-direction: column;
+
+        &-noinfo {
+            display: flex;
+            font-size: 22px;
+        }
+
+        &-card {
+            width: 1140px;
+            height: 82px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #6666FF;
+            border: 3px solid $primarycolor;
+            border-radius: 12px;
+            color: white;
+
+            &:not(:last-of-type) {
+                margin-bottom: 32px;
+            }
+
+            &-title {
+                font-size: 30px;
+                margin-left: 37px;
+                margin-top: 19px;
+            }
+
+            &-crud {
+                display: flex;
+                margin-top: 26px;
+                margin-right: 37px;
+                gap: 15px;
+
+                &-deledit {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .profile-container {
+        &-user-blogs {
+            &-card {
+                width: 850px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1265px) {
+    .profile-container {
+        &-title {
+            margin-left: 200px;
+        }
+
+        &-information {
+            &-avatar {
+                margin-left: 200px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1145px) {
+    .profile-container {
+        &-title {
+            margin-left: 100px;
+        }
+
+        &-information {
+            &-avatar {
+                margin-left: 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .profile-container {
+        &-title {
+            margin-left: 50px;
+        }
+
+        &-information {
+            &-avatar {
+                margin-left: 50px;
+            }
+        }
+
+        &-user-blogs, &-activity {
+            margin-left: 50px;
+        }
+
+        &-information {
+            &-data {
+                &-wrapper {
+                    gap: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 885px) and (max-width: 910px) {
+    .profile-container {
+        &-information {
+            &-data {
+                &-wrapper {
+                    gap: 20px;
+                }
+            }
+        }
+
+        &-user-blogs {
+            &-card {
+                width: 750px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 884px) {
+    .profile-container {
+        &-title {
+            width: 470px;
+            margin: auto;
+        }
+
+        &-information {
+            justify-content: center;
+            align-items: center;
+            &-data {
+                &-wrapper {
+                    gap: 20px;
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &-user-blogs {
+            &-card {
+                width: 650px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .profile-container {
+        &-user-blogs {
+            &-card {
+                width: 500px;
+
+                &-title { 
+                    font-size: 20px;
+                    margin-top: 25px;
+                }
+
+                &-crud { 
+                    gap: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .profile-container {
+        &-user-blogs {
+            &-card {
+                width: 380px;
+
+                &-title { 
+                    font-size: 18px;
+                    margin-top: 23px;
+                }
+
+                &-crud { 
+                    gap: 3px;
+                }
+            }
+        }
+
+        &-activity, &-title {
+            &-text {
+                font-size: 25px;
+            }
+            &-horizontal {
+                width: 315px;
+            }
+        }
+
+        &-title {
+            &-text {
+                text-align: center;
+            }
+
+            &-horizontal {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px)  {
+    .profile-container {
+        &-user-blogs {
+            margin-left: 30px;
+            &-card { 
+                width: 340px;
+            }
+        }
+
+        &-activity, &-title {
+            &-text {
+                font-size: 20px;
+            }
+            &-horizontal {
+                width: 260px;
+            }
+        }
+
+        &-title {
+            width: 260px;
+            margin-left: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .profile-container {
+        &-user-blogs { 
+            margin-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .profile-container {
+        &-user-blogs { 
+            margin-left: 10px;
+        }
+
+        &-information {
+            &-data {
+                &-wrapper {
+                    &-element {
+                        width: 190px;
+                    }
+                }
+            }
+        }
+    }
+}

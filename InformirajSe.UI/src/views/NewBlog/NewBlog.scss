@@ -1,0 +1,129 @@
+$primary-color: #6633ff;
+
+@mixin test-border{
+    border: solid black 1px;
+}
+
+@mixin style1{
+    color: #0056b3;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: start;
+    margin-left: 10%;
+}
+
+.new-blog-main-content{
+    // @include test-border();
+    width: 85%;
+    margin-top: 2%;
+    margin-bottom: 12%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .main-title{
+        color: $primary-color;
+        margin-top: 4%;
+        margin-bottom: 5%
+    }
+
+    .new-blog-form{
+        // @include test-border();
+        
+        // padding:8%;
+        
+    
+        .new-blog-label{
+            @include style1();
+        }
+
+        .new-blog-title-input{
+            width: 80%;
+            height: 40px;
+            // border-radius: 8px;
+            // @include test-border();
+            margin-left: 1px;
+            margin-top: 3px;
+        }
+
+        .new-blog-title-summary{
+            width: 80%;
+            height: 80px;
+        }
+
+        .new-blog-content-input{
+            width: 80%;
+            margin-left: 1px;
+            height: 200px;
+        }
+        
+        .new-blog-submit{
+            width: 12%;
+            height: 50px;
+            background-color: #0056b3;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 16px;  
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .new-blog-main-content{
+        // @include test-border();
+        width: 85%;
+        margin-top: 2%;
+        margin-bottom: 12%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .main-title{
+            color: $primary-color;
+            margin-top: 4%;
+            margin-bottom: 5%
+        }
+    
+        .new-blog-form{
+            // @include test-border();
+            
+            // padding:8%;
+            
+        
+            .new-blog-label{
+                @include style1();
+            }
+    
+            .new-blog-title-input{
+                width: 80%;
+                height: 40px;
+                // border-radius: 8px;
+                // @include test-border();
+                margin-left: 1px;
+                margin-top: 3px;
+            }
+    
+            .new-blog-title-summary{
+                width: 80%;
+                height: 80px;
+            }
+    
+            .new-blog-content-input{
+                width: 80%;
+                margin-left: 1px;
+                height: 200px;
+            }
+            
+            .new-blog-submit{
+                width: 90px;
+                height: 50px;
+                background-color: #0056b3;
+                border-radius: 10px;
+                border: none;
+                color: #fff;
+                font-weight: bolder;
+                font-size: 16px;  
+            }
+        }
+    }
+} 

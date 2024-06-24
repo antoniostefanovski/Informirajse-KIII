@@ -1,0 +1,38 @@
+$primary-color: #6633ff;
+
+@mixin test-border{
+    border: solid black 1px;
+}
+
+.comment-main{
+    @include test-border();
+    border-radius: 10px;
+    margin-left: 12.8%;
+    margin-top: 1.5%;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+
+    .comment-left{
+        font-size: 45px;
+        display: flex;
+        align-items: center;
+    }
+
+    .comment-right{
+        //@include test-border();
+        width: 85%;
+        
+        .comment-author-name{
+            float: left;
+            font-weight: bold;
+        }
+
+        .comment-text{
+            margin-top: 3.5%;
+            float: left;
+        }
+    }
+}

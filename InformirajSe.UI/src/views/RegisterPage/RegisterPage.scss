@@ -1,0 +1,168 @@
+$primary-color: #6633FF;
+$border-color: #484848;
+
+.register-page-body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+	background-size: 400% 540%;
+	animation: reg_gradient 15s ease infinite;
+    padding-top: 5%;
+    padding-bottom: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes reg_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.register-page-body-container {
+    width: 1035px;
+    height: 800px;
+    background-color: white;
+    border-radius: 20px;
+    
+    &-first {
+        display: flex;
+        justify-content: space-evenly;
+
+        &-registration {
+            margin-top: 70px;
+            
+            &-container {
+                height: 112px;
+                display: flex;
+                flex-direction: column;
+    
+                &-title {
+                    font-size: 40px;
+                }
+        
+                &-account {
+                    margin-top: 38px;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #545454;
+        
+                    &-bold {
+                        color: black;
+                    }
+                }
+            }
+        }
+    
+        &-logo {
+            margin-top: 70px;
+            width: 300px;
+            height: 70px;
+
+            &-img {
+                margin-left: 44px;
+            }
+        }
+    }
+
+    &-form {
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        font-weight: 500;
+
+        &-left {
+            &-username, &-email, &-date, &-fullname {
+                width: 205px;
+                margin-bottom: 12px;
+                color: #484848;
+                font-size: 18px;
+                text-align: left;
+
+                &-asterisk {
+                    color: red;
+                }
+            }
+
+            &-email, &-date, &-fullname {
+                margin-top: 25px;
+            }
+
+            &-input {
+                width: 385px;
+                padding: 15px;
+                display: flex;
+                text-align: left;
+                font-size: 18px;
+                color: black;
+                border-radius: 5px;
+                border: 2px solid $border-color;
+
+                &:focus {
+                    border-color: $primary-color;
+                }
+            }
+        }
+
+        &-right {
+            &-password, &-repeatedpassword, &-gender {
+                width: 230px;
+                margin-bottom: 12px;
+                color: #484848;
+                font-size: 18px;
+                text-align: left;
+
+                &-asterisk {
+                    color: red;
+                }
+            }
+
+            &-repeatedpassword, &-gender {
+                margin-top: 25px;
+            }
+
+            &-password {
+                &-div {
+                    display: flex;
+                    align-items: center;
+
+                    &-img {
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        right: 350px;
+                    }
+                }
+            }
+
+            &-input, &-gender-list {
+                width: 385px;
+                padding: 15px;
+                display: flex;
+                text-align: left;
+                font-size: 18px;
+                color: black;
+                border-radius: 5px;
+                border: 2px solid $border-color;
+
+                &:focus {
+                    border-color: $primary-color;
+                }
+            }
+
+            &-error {
+                margin-top: 22px;
+                color: red;
+                font-size: 14px;
+                text-align: left;
+            }
+        }
+    }
+}

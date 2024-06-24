@@ -1,0 +1,154 @@
+$primary-color: #6633FF;
+
+@mixin test-border{
+    border: solid black 1px;
+}
+
+@mixin register-form-label-style{
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+@mixin register-form-input-style{
+    background-color: #f3f2f2;
+    border: none;
+    height: 30px;
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+@mixin invalid-username {
+    font-size: 1rem;
+    color: red;
+}
+
+.register-form-main-content{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-45deg, #6633ff, #6666ff, #6699ff, #23a6d5, #66ccff, #23d5ab, #66ffff);
+	background-size: 400% 540%;
+	animation: reg_gradient 15s ease infinite;
+    padding-top: 10%;
+    padding-bottom: 20%;
+}
+
+@keyframes reg_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.register-main-content-second{
+    //@include test-border();
+    width: 70%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    border-radius: 20px;
+    
+    .register-form-logo{
+        margin-top: 4%;
+        margin-bottom: 1.8%;
+    }
+    .register-form{
+        display: flex;
+
+        .register-form-left{
+            width: 50%;
+            height: 400px;
+            // @include test-border();
+            padding: 10px;
+            display: block;
+            
+            @include invalid-username();
+
+            .register-name-label{
+                @include register-form-label-style();
+            }
+
+            .register-surname-label{
+                @include register-form-label-style();
+            }
+
+            .register-date-label{
+                @include register-form-label-style();
+            }
+
+            .register-gender-label{
+                @include register-form-label-style();
+            }
+
+            .register-name-input{
+                @include register-form-input-style();
+            }
+            .register-surname-input{
+                @include register-form-input-style();
+            }
+            .register-date-input{
+                @include register-form-input-style();
+            }
+            .register-gender-list{
+                @include register-form-input-style();
+            }
+        }
+    
+        .register-form-right{
+            width: 50%;
+            margin-top: 8px;
+            // @include test-border();
+
+            @include invalid-username();
+
+            .register-email-label{
+                @include register-form-label-style();
+            }
+
+            .register-pw-label{
+                @include register-form-label-style();
+            }
+
+            .register-pw-repeat-label{
+                @include register-form-label-style();
+            }
+
+            .register-email-input{
+                @include register-form-input-style();
+            }
+
+            .register-pw-input{
+                @include register-form-input-style();
+            }
+
+            .register-pw-repeat-input{
+                @include register-form-input-style();
+            }
+
+            .register-submit-btn{
+                background-color: $primary-color;
+                color: white;
+                font-size: medium;
+                font-weight: bolder;
+                width: 150px;
+                height: 50px;
+                border-radius: 10px;
+                border:none;
+                cursor: pointer;
+            }
+
+            .register-submit-btn:active{
+                background-color: #66f;
+            }
+        }
+    }
+
+}
