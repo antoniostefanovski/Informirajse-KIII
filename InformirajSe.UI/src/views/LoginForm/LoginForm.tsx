@@ -21,7 +21,7 @@ export default function LoginForm(){
         const status = await loginService.login(username, password);
 
         if(status) {
-            window.location.replace('http://localhost:3000/');
+            window.location.replace('http://informirajse.mk/');
         } else {
             setIncorrectCredentials(true);
         }

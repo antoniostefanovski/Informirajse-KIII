@@ -46,7 +46,7 @@ function RegisterPage() {
         const response = await registerService.register(username, password, repeatedPassword, email, fullName, date, gender);
 
         if(response.ok) {
-            window.location.replace('http://localhost:3000/successful-registration');
+            window.location.replace('http://informirajse.mk/successful-registration');
         } else {
             errorTypeValidation(response.errorType ?? RegistrationError.InvalidModel);
         }

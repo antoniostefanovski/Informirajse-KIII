@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:6501",
+      "applicationUrl": "http://api.informirajse.mk",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

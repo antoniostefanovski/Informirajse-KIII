@@ -34,7 +34,7 @@ export default function BlogPreview() {
             return;
         }
 
-        window.location.replace('http://localhost:3000/allblogs');
+        window.location.replace('http://informirajse.mk/allblogs');
     }
 
     const getBlogData = async () => {

@@ -43,7 +43,7 @@ export default function Register() {
         const response = await registerService.register(username, password, repeatedPassword, email, fullName, date, gender);
 
         if(response.ok) {
-            window.location.replace('http://localhost:3000/login');
+            window.location.replace('http://informirajse.mk/login');
         } else {
             errorTypeValidation(response.errorType ?? RegistrationError.InvalidModel);
         }

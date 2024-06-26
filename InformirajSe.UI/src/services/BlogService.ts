@@ -10,7 +10,7 @@ export class BlogService{
         const model = new AddBlogDTO(title, bodyContent);
 
         try {
-            const response = await fetch('http://localhost:6501/api/new-blog', {
+            const response = await fetch('http://api.informirajse.mk/api/new-blog', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -20,10 +20,10 @@ export class BlogService{
             });
 
             if(response.ok) {
-                 window.location.replace('http://localhost:3000/allblogs');
+                 window.location.replace('http://informirajse.mk/allblogs');
                 return true;
             } else if(response.status == 403) {
-                window.location.replace('http://localhost:3000/login');
+                window.location.replace('http://informirajse.mk/login');
                 return false;
             } else {
                 console.error('Error: ', response.status, response.statusText);
@@ -40,7 +40,7 @@ export class BlogService{
         const model = new EditBlogDTO(blogId, title, bodyContent);
 
         try {
-            const response = await fetch(`http://localhost:6501/api/edit-blog`, {
+            const response = await fetch(`http://api.informirajse.mk/api/edit-blog`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -53,7 +53,7 @@ export class BlogService{
                 callback();
                 return;
             } else if(response.status == 403) {
-                window.location.replace('http://localhost:3000/login');
+                window.location.replace('http://informirajse.mk/login');
                 return false;
             } else {
                 console.error('Error: ', response.status, response.statusText);
@@ -68,7 +68,7 @@ export class BlogService{
 
     public async deleteBlog(blogId: string){
         try {
-            const response = await fetch('http://localhost:6501/api/delete-blog/'+ blogId, {
+            const response = await fetch('http://api.informirajse.mk/api/delete-blog/'+ blogId, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -77,10 +77,10 @@ export class BlogService{
             });
 
             if(response.ok) {
-                 window.location.replace('http://localhost:3000/blogs');
+                 window.location.replace('http://informirajse.mk/blogs');
                 return true;
             } else if(response.status == 403) {
-                window.location.replace('http://localhost:3000/login');
+                window.location.replace('http://informirajse.mk/login');
                 return false;
             } else {
                 console.error('Error: ', response.status, response.statusText);
@@ -96,7 +96,7 @@ export class BlogService{
     public async getBlogs(): Promise<Blog[] | undefined> {
 
         try {
-            const response = await fetch('http://localhost:6501/api/blogs', {
+            const response = await fetch('http://api.informirajse.mk/api/blogs', {
                 method: 'GET',
                 credentials: 'include',
             });
@@ -117,7 +117,7 @@ export class BlogService{
         const model = new BlogSearchDTO(author, from, to);
 
         try {
-            const response = await fetch('http://localhost:6501/api/filter-blogs', {
+            const response = await fetch('http://api.informirajse.mk/api/filter-blogs', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -141,7 +141,7 @@ export class BlogService{
     public async getBlog(id: string): Promise<GetBlogDTO | undefined> {
 
         try {
-            const response = await fetch(`http://localhost:6501/api/blog/${id}`, {
+            const response = await fetch(`http://api.informirajse.mk/api/blog/${id}`, {
                 method: 'GET',
                 credentials: 'include'
             });
@@ -160,7 +160,7 @@ export class BlogService{
 
     public async getMostInteresting(): Promise<Blog[] | undefined> {
         try {
-            const response = await fetch('http://localhost:6501/api/most-interesting', {
+            const response = await fetch('http://api.informirajse.mk/api/most-interesting', {
                 method: 'GET',
                 credentials: 'include'
             });

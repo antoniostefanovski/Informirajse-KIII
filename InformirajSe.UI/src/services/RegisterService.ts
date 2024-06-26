@@ -8,7 +8,7 @@ export class RegisterService {
         const model = new RegisterInfo(username, password, repeatedPassword, email, fullname, dateOfBirth, gender);
 
         try {
-            const response = await fetch('http://localhost:6501/api/register', {
+            const response = await fetch('http://api.informirajse.mk/api/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ export class CommentService{
         const model = new AddCommentDTO(commentDescription, blogId);
 
         try {
-            const response = await fetch('http://localhost:6501/api/add-comment', {
+            const response = await fetch('http://api.informirajse.mk/api/add-comment', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -30,7 +30,7 @@ export class CommentService{
 
     public async getComments(blogId: string): Promise<Comment[] | undefined> {
         try {
-            const response = await fetch(`http://localhost:6501/api/get-comments/${blogId}`, {
+            const response = await fetch(`http://api.informirajse.mk/api/get-comments/${blogId}`, {
                 method: 'GET',
                 credentials: 'include',
             });

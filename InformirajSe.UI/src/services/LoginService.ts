@@ -6,7 +6,7 @@ export class LoginService {
         const model = new LoginInfo(username, password);
 
         try {
-            const response = await fetch('http://localhost:6501/api/login', {
+            const response = await fetch('http://api.informirajse.mk/api/login', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -16,7 +16,7 @@ export class LoginService {
             });
 
             if(response.ok) {
-                // window.location.replace('http://localhost:3000/');
+                // window.location.replace('http://informirajse.mk/');
                 return true;
             } else {
                 console.error('Error: ', response.status, response.statusText);
@@ -31,7 +31,7 @@ export class LoginService {
 
     public async isAuthenticated(): Promise<boolean> {
         try {
-            const response = await fetch('http://localhost:6501/api/isAuthenticated', {
+            const response = await fetch('http://api.informirajse.mk/api/isAuthenticated', {
                 credentials: 'include',
             });
 
