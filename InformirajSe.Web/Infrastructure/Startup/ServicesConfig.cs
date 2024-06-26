@@ -18,6 +18,12 @@ namespace InformirajSe.Web.Infrastructure.Startup
                                      .AllowAnyMethod()
                                      .AllowAnyHeader()
                                      .AllowCredentials());
+                options.AddPolicy("AllowProduction",
+                    builder => builder
+                                     .WithOrigins("http://informirajse.mk")
+                                     .AllowAnyMethod()
+                                     .AllowAnyHeader()
+                                     .AllowCredentials());
             });
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));

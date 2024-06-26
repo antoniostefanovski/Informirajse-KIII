@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: ingress-nginx
+  labels:
+    app: informirajse
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: informirajse
+      group: informirajse-app
+  template:
+    metadata:
+      labels:
+        app: informirajse
+        group: informirajse-app
+    spec:
+      containers:
+      - name: informirajse
+        image: anthony70/informirajse-app:latest
+        imagePullPolicy: Always
+        env:
+        - name: ConnectionStrings__InformirajseDbConnection
+          valueFrom:
+            configMapKeyRef:
+              name: informirajseapp.config
+              key: POSTGRES_CONNECTION
+        - name: ASPNETCORE_ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: informirajseapp.config
+              key: ENVIRONMENT
+        ports:
+        - containerPort: 8080
+          name: is-port
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: is-service
+  namespace: ingress-nginx
+spec:
+  selector:
+    app: informirajse
+    group: informirajse-app
+  ports:
+  - name: is-service-port
+    protocol: TCP
+    port: 443
+    targetPort: is-port

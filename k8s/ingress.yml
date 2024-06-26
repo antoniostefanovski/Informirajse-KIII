@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: informirajse-ingress
+  namespace: ingress-nginx
+  labels:
+    group: informirajse-app
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: informirajse.mk
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: ui-service
+            port:
+              number: 80
+        pathType: Prefix
+  - host: api.informirajse.mk
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: is-service
+            port:
+              number: 443
+        pathType: Prefix

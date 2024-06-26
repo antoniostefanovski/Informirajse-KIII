@@ -9,6 +9,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /build
 COPY --from=build /app .
 
-EXPOSE 433/tcp
+EXPOSE 8080/tcp
 
 ENTRYPOINT [ "dotnet", "/build/InformirajSe.Web.dll" ]

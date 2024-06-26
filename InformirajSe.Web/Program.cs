@@ -40,6 +40,10 @@ namespace InformirajSe.Web
             {
                 app.UseCors("AllowLocalhost3000");
             }
+            else
+            {
+                app.UseCors("AllowProduction");
+            }
 
             var dbContext = app.Services.GetRequiredService<InformirajseDbContext>();
 

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: informirajseapp.config
+  namespace: ingress-nginx
+data:
+  ENVIRONMENT: "Production"
+  POSTGRES_CONNECTION: "User ID=postgres;Password=is2024!$;Host=postgres-svc;Port=5432;Database=informirajse2;Pooling=true;"
+  POSTGRES_PASSWORD: "is2024!$"

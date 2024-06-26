@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres-statefulset
+  namespace: ingress-nginx
+spec:
+  serviceName: postgres-service
+  replicas: 3
+  selector:
+    matchLabels:
+      app: informirajse-app-postgres
+      group: informirajse-app
+  template:
+    metadata:
+      labels:
+        app: informirajse-app-postgres
+        group: informirajse-app
+    spec:
+      containers:
+      - name: informirajse-app-postgres
+        image: postgres
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              name: informirajseapp.config
+              key: POSTGRES_PASSWORD
+        ports:
+        - containerPort: 5432
+          name: postgres-port
+  volumeClaimTemplates:
+  - metadata:
+      name: postgres-claim
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 2Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-svc
+  namespace: ingress-nginx
+spec:
+  selector:
+    app: informirajse-app-postgres
+    group: informirajse-app
+  ports:
+  - name: svc-port
+    protocol: TCP
+    port: 5432
+    targetPort: postgres-port
